@@ -3,6 +3,12 @@
 	"description": "This project aims to support both a USB/IP server and a client on Windows platform.",
 	"homepage": "https://github.com/cezanne/usbip-win",
 	"license": "GNU General Public License v3.0",
+	"pre_install":[
+		"bcdedit.exe /set TESTSIGNING ON"
+	],
+	"post_install":[
+		"usbip install"
+	],
 	"url": [
 		"https://github.com/cezanne/usbip-win/releases/download/v0.2.0/usb.ids",
 		"https://github.com/cezanne/usbip-win/releases/download/v0.2.0/usbip.exe",
